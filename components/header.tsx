@@ -1,2 +1,2 @@
 "use client";import {Plus} from "lucide-react";
-export function Header({eyebrow,title,desc,onAdd}:{eyebrow:string;title:string;desc?:string;onAdd?:()=>void}){return <div className="topbar"><div><div className="eyebrow">{eyebrow}</div><h1>{title}</h1>{desc&&<div className="muted">{desc}</div>}</div>{onAdd&&<button className="btn" onClick={onAdd}><Plus size={16}/> 添加</button>}</div>}
+export function Header({eyebrow,title,desc,onAdd}:{eyebrow:React.ReactNode;title:React.ReactNode;desc?:React.ReactNode;onAdd?:()=>void}){return <div className="topbar"><div><div className="eyebrow">{eyebrow}</div><h1>{title}</h1>{desc&&<div className="muted">{desc}</div>}</div>{onAdd&&<button className="btn" onClick={onAdd}><Plus size={16}/> 添加</button>}</div>}
