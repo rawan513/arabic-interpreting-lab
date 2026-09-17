@@ -1,0 +1,5 @@
+ "use client";
+import { usePathname, useRouter } from "next/navigation";
+import { BookOpen, ClipboardList, FileText, Home, Languages, ListChecks, Mic2, NotebookPen } from "lucide-react";
+const items=[["/","首页",Home],["/materials","材料库",FileText],["/sessions","口译训练",Mic2],["/errors","错误库",ClipboardList],["/vocabulary","词汇表达",Languages],["/dictation","听抄中心",BookOpen],["/tasks","每日任务",ListChecks]];
+export function Sidebar(){const path=usePathname(),router=useRouter();return <aside className="sidebar"><div className="brand"><div className="brand-mark">ع</div><div><b>Arabic Lab</b><div className="muted">Interpreting Studio</div></div></div><div className="nav-label">Workspace</div>{items.map(([href,label,Icon])=><button key={href as string} className={"nav-item "+(path===href?"active":"")} onClick={()=>router.push(href as string)}><Icon size={17}/>{label as string}</button>)}<div className="nav-label">About</div><div className="card" style={{padding:14,background:"#faf9ff",border:"none"}}><NotebookPen size={18} color="#7567e8"/><p style={{fontSize:12,lineHeight:1.7,color:"#68748a"}}>记录每一次错误，让每一次练习都留下痕迹。</p></div></aside>}

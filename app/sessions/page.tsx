@@ -1,0 +1,3 @@
+ "use client";
+import { Header } from "../../components/header";
+export default function Sessions(){return <><Header eyebrow="INTERPRETING SESSIONS" title="口译训练" desc="记录每一次练习的表现和改进目标。"/><div className="content"><div className="card"><h2>本周训练记录</h2><div className="list" style={{marginTop:12}}>{[["中译阿 · 交替传译","联合国气候变化相关讲话","15 分钟"],["阿译中 · 视译","经济发展报告","20 分钟"],["中译阿 · 跟读复述","国际合作访谈","10 分钟"]].map((x,i)=><div className="list-row" key={i}><div><b>{x[0]}</b><div className="muted" style={{marginTop:5}}>{x[1]}</div></div><span className="tag blue">{x[2]}</span></div>)}</div><div className="muted" style={{marginTop:18}}>训练记录的新增表单和录音上传将在下一版加入。</div></div></div></>}

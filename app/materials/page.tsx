@@ -1,0 +1,3 @@
+ "use client";
+import { Header } from "../../components/header";
+export default function Materials(){return <><Header eyebrow="MATERIAL LIBRARY" title="材料库" desc="保存新闻、演讲、访谈和纪录片材料。"/><div className="content"><div className="card"><h2>示例材料</h2><div className="list" style={{marginTop:12}}>{[["联合国气候变化相关讲话","新闻讲话","中译阿","环境政策"],["阿拉伯世界经济发展报告","外刊文章","阿译中","经济"],["国际合作与全球治理访谈","访谈","阿译中","国际关系"]].map((x,i)=><div className="list-row" key={i}><div><b>{x[0]}</b><div className="muted" style={{marginTop:5}}>{x[1]} · {x[2]}</div></div><span className="tag">{x[3]}</span></div>)}</div><div className="muted" style={{marginTop:18}}>材料库将在下一版支持新增、编辑、关联错误和词汇。</div></div></div></>}
